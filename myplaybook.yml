@@ -2,17 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-     - name: i want to install git
-       apt:
-        name= git
-        state= present
+  - name : i want to install git on ubuntu node
+    apt: name=git state=absent
  
-     - name: i want to install tree 
-       apt: 
-        name= tree 
-        state=present
+  - name: install tree
+    apt: name=tree state=absent
 
-     - name: i want to install wget 
-       apt: 
-         name= wget
-         state= present  
+  - name: install wget on ubuntu node
+    apt: name=wget state=present  
